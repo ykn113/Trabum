@@ -7,21 +7,66 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@500&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <% if signed_in? %>
-      <li>
-        <%= link_to "ログアウト", logout_path, method: :delete %>
-      </li>
-    <% else %>
-      <li>
-        <%= link_to "新規登録", signup_path %>
-      </li>
-      <li>
-        <%= link_to "ログイン", login_path %>
-      </li>
-    <% end %>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <h2><%= link_to 'トラバム', root_path, class: 'nav-link text-dark logo' %></h2>
+        <button class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ml-auto ">
+            <% if signed_in? %>
+              <li class="nav-item ">
+                <%= link_to "ホーム", users_path, class: 'fas fa-home nav-link text-dark nav-home' %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "アルバム", posts_path, class: "fas fa-book nav-link text-dark nav-posts" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "新規投稿", new_post_path, class: "fas fas fa-camera nav-link text-dark nav-newposts" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "マイページ", user_path(@current_user), class: "fas fa-user nav-link text-dark nav-mypage" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "ログアウト",logout_path, method: :delete, class: "fas fa-sign-out-alt nav-link text-dark nav-logout" %>
+              </li>
+            <% else %>
+              <li class="nav-item ">
+                <%= link_to "ホーム", root_path, class: 'fas fa-home nav-link text-dark nav-home' %>
+              </li>
+              <li class="nav-item ">
+                <%= link_to "アバウト", about_path, class: 'fas fa-link nav-link text-dark nav-about' %>
+              </li>
+              <li class="nav-item ">
+                <%= link_to "新規登録", signup_path, class: 'fas fa-user-plus nav-link text-dark nav-signup' %>
+              </li>
+              <li class="nav-item ">
+                <%= link_to "ログイン", login_path, class: 'fas fa-sign-in-alt nav-link text-dark nav-login' %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
     <%= yield %>
+    <footer>
+      <p class="footer-text">© 2021 Yukino Shinji</p>
+    </footer>
   </body>
 </html>
