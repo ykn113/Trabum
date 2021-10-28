@@ -42,8 +42,6 @@ footer {
   line-height: 50px;
   background-color: #94BCC0;
   margin-top: 50px;
-  position: absolute;
-  bottom: 0;
 }
 
 // ボタンカラー
@@ -56,4 +54,8 @@ footer {
     color: #362222!important;
     background-color: #94BCC0!important;
     border-color: #94BCC0!important;
+}
+
+.form-group {
+  margin-bottom: 20px;
 }
