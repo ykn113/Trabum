@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_28_021726) do
+ActiveRecord::Schema.define(version: 2021_10_28_074029) do
 
   create_table "continents", force: :cascade do |t|
     t.string "name"
@@ -24,10 +24,12 @@ ActiveRecord::Schema.define(version: 2021_10_28_021726) do
     t.string "image_id", null: false
     t.string "country", null: false
     t.string "city", null: false
-    t.string "memo"
+    t.text "memo"
     t.string "flight"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "from_date"
+    t.date "to_date"
   end
 
   create_table "users", force: :cascade do |t|
