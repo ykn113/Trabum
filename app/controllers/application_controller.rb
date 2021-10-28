@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   
   before_action :current_user
-  before_action :require_sign_in!
+  before_action :require_sign_in!, except: [:top, :about]
   helper_method :signed_in?
 
   protect_from_forgery with: :exception
