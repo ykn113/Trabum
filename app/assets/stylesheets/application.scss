@@ -64,11 +64,14 @@ footer {
   display: flex;
   flex-wrap: wrap;
 }
-
+.items {
+  padding: 10px;
+}
 .photo {
   border-radius: 50%;
   width:  350px;
   height: 350px; 
+  object-fit: cover
 }
 
 a, a:hover {

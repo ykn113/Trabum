@@ -16,6 +16,13 @@ class UsersController < ApplicationController
   end
   
   def index
+    @continents = Continent.all
+    
+    @posts = current_user.posts
+    @all_posts_count = @posts.count
+    # if @all_posts_count <= 5
+    #   render html: helpers.tag.strong('旅行ビギナー')
+    # end
   end
   
   def show

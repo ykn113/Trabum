@@ -26,10 +26,10 @@
   </div>
 
   <div class="row">
-    <div class="post-items">
+    <div class="col-md-12 post-items">
       <% @posts.each do |post| %>
-        <div class="col-md-5 items">
-          <%= link_to post_path(post.id) do %>
+        <div class="items">
+           <%= link_to post_path(post.id) do %>
             <%= attachment_image_tag post,:image, class: "img-fluid photo", fallback: "no_image.jpg" %>
             <h5><%= post.country %>・<%= post.city %></h5>
           <% end %>
