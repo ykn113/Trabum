@@ -59,3 +59,18 @@ footer {
 .form-group {
   margin-bottom: 20px;
 }
+
+.post-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.photo {
+  border-radius: 50%;
+  width:  350px;
+  height: 350px; 
+}
+
+a, a:hover {
+  color: #000!important;
+}

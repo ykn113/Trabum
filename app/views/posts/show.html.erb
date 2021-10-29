@@ -1,2 +1,37 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-8 ">
+      <%= link_to post_path(@post.id) do %>
+        <%= attachment_image_tag @post,:image, class: 'img-fluid',  fallback: "no_image.jpg" %>
+      <% end %>
+    </div>
+    <div class="col-md-4">
+      <div class="post-details">
+        <div class="country">
+          <h3><%= @post.country %>・<%= @post.city %></h3>
+        </div>
+        
+        <div class="flight">
+          <h4>便名</h4>
+            <%= @post.flight %>
+        </div>
+        
+        <div class="date">
+          <h4>日付</h4>
+            <%= @post.from_date %> ~ <%= @post.to_date %>
+        </div>
+        
+        <div class="date">
+          <h4>思い出メモ</h4>
+            <%= @post.memo %>
+        </div>
+      </div>
+      
+      <div class="button">
+        <%= link_to "", edit_post_path, class:"fas fa-edit btn btn-lg btn-primary" %></td>
+        <%= link_to "", post_path(@post),method: :delete, class:"fas fa-trash btn btn-lg btn-primary", "data-confirm" =>"本当に消しますか?" %>
+      </div>
+      
+    </div>
+  </div>
+</div>
