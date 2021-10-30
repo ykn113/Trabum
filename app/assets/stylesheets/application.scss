@@ -23,6 +23,16 @@
   box-sizing: border-box;
 }
 
+body {
+ display:flex;
+ flex-direction:column;
+ min-height:100vh;
+}
+
+main {
+ margin-bottom:auto;
+}
+
 .navbar {
   background-color:#94BCC0;
 }

@@ -63,13 +63,14 @@
         </div>
       </nav>
     </header>
-    
-    <!--フラッシュメッセージ-->
-    <% flash.each do |key, value| %>
-      <%= content_tag(:div, value, class: "#{key}") %>
-    <% end %>
-
-    <%= yield %>
+    <main>
+      <!--フラッシュメッセージ-->
+      <% flash.each do |key, value| %>
+        <%= content_tag(:div, value, class: "#{key}") %>
+      <% end %>
+  
+      <%= yield %>
+    </main>
     <footer>
       <p class="footer-text">© 2021 Yukino Shinji</p>
     </footer>
