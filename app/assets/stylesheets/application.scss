@@ -60,6 +60,31 @@ a, a:hover {
     border-color: #94BCC0!important;
 }
 
+// ページネーション
+.pagination {
+  justify-content: center;
+}
+
+.pagination>li {
+  border-radius: 15px;
+}
+
+.pagination>li>a {
+  border: none;
+  color: #FFF2E5;
+  border-radius: 15px !important;
+}
+
+.pagination>.active>a {
+  background-color: #ECEEE0 !important;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.pagination>li>a:hover {
+  color: #DC9750;
+  background-color: #DC9750;
+}
+
 // About
 .about-title {
   padding: 0.4em 0.5em;

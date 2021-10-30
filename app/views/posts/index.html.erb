@@ -3,7 +3,7 @@
     <div class="col-md-12">
       <div class="sidebar">
         <div class="area">
-          <h5>エリア検索</h5>
+          <h3>エリア検索</h3>
           <%= link_to "全エリア", posts_path, class: "btn btn-primary" %>
           <% @continents.each do |continent| %>
             <%= link_to continent.name, posts_path(continent_id: continent.id), class: "btn btn-primary" %>
