@@ -4,9 +4,9 @@
       <div class="sidebar">
         <div class="area">
           <h5>エリア検索</h5>
-          <%= link_to "全エリア", posts_path %><br>
+          <%= link_to "全エリア", posts_path, class: "btn btn-primary" %>
           <% @continents.each do |continent| %>
-            <%= link_to continent.name, posts_path(continent_id: continent.id) %><br>
+            <%= link_to continent.name, posts_path(continent_id: continent.id), class: "btn btn-primary" %>
           <% end %>
         </div>
       </div>
@@ -26,12 +26,14 @@
   </div>
 
   <div class="row">
-    <div class="post-items">
+    <div class="col-md-12 post-items">
       <% @posts.each do |post| %>
-        <div class="col-md-5 items">
+        <div class="items">
           <%= link_to post_path(post.id) do %>
             <%= attachment_image_tag post,:image, class: "img-fluid photo", fallback: "no_image.jpg" %>
-            <h5><%= post.country %>・<%= post.city %></h5>
+            <div class="item-text">
+              <h5><%= post.country %>・<%= post.city %></h5>
+            </div>
           <% end %>
         </div>
       <% end %>

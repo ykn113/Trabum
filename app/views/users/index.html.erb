@@ -1,0 +1,17 @@
+<div id="container">
+  <div class="row">
+    <div class="image1">
+      <div class="col-md-12">
+        <div class="continent">
+          <% @continents.each do |continent| %>
+            <div class="continent-area">
+              <%= link_to continent.name, posts_path(continent_id: continent.id), class: "btn-circle-flat" %><br>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= @user_level %>
