@@ -1,24 +1,30 @@
-# README
+# トラバム
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## ✈️サイト概要
+**「トラバム」** は**トラ**ベルフォトアル**バム**のアプリです。旅行の写真と日付や便名、思い出メモなどの詳細を記録し、保存することが出来ます。
 
-Things you may want to cover:
+投稿数を増やすとユーザーのトラベラーレベルが上がるようになっていたり、
+投稿の多いエリアがあるとバッジがもらえたりと
+一般的なフォトアルバムサイトよりもユーザーがわくわくするような機能が特徴です。
 
-* Ruby version
+### 📸制作背景
+このウェブアプリを選んだ理由は、
+現在パンデミックの影響で旅行が出来ない中、昔の旅行の写真を見返して思い出に浸ったり、
+また旅行に行ける日のことを思い描いて楽しみにしたりしている人が多いと考えたからです。
 
-* System dependencies
+また今までの経験から、旅行の後に記憶が新鮮なうちにノートやアルバムに記録しておきたいと思っていても、
+全部の写真をアップロードするのに時間がかかることが理由で後回しにしてしまう人が少なくないと思い、
+SNS以外の場所で気軽に旅行を記録できるものを作りたいと考えたことも理由のひとつです。
 
-* Configuration
+近い将来に旅行が気兼ねなくできるようになった際、ユーザーが増えることも期待して作りました。
 
-* Database creation
+### 👀こだわった点
+- ユーザーが気軽に利用できるよう、ひと目で使い方がわかるデザインとシンプルな設計にしました。
+- 一般的なフォトアルバムのサイトと差異をつけるため、ユーザーが投稿数を増やしたくなるようなゲーム感覚の機能をつけました。
+- 写真を一枚に限定することで投稿を手早く容易にできるという利点と、ユーザーが１番のお気に入りの写真を選ぶ楽しさもあると考えました。
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 開発環境
+- 言語：HTML,CSS,JavaScript,Ruby
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
