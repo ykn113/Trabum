@@ -17,3 +17,9 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+var badge_array = JSON.parse($('.badge_array').val());
+
+$.each(badge_array, function(value) {
+  $("#"+ value).addClass("completed")
+})

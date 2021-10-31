@@ -1,2 +1,15 @@
 <h1>マイページ</h1>
-<%= @count_list %>
+<%= @completed_badges %>
+<input type=hidden class="badge_array" value="<%= @completed_badges_js %>">
+<div class="badges">
+  <%= image_tag "Japan.png", id: "日本", class: "image" %>
+  <%= image_tag "Asia.png", id: "アジア", class: "image" %>
+  <%= image_tag "Oceania.png", id: "オセアニア", class: "image" %>
+  <%= image_tag "Europe.png", id: "ヨーロッパ", class: "image" %>
+  <%= image_tag "Middle_East.png", id: "中東", class: "image" %>
+  <%= image_tag "Africa.png", id: "アフリカ", class: "image" %>
+  <%= image_tag "North_America.png", id: "北米", class: "image" %>
+  <%= image_tag "South_America.png", id: "南米", class: "image" %>
+  
+  <%= image_tag 'Japan.png', class: 'badge' %>
+</div>

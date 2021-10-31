@@ -1,7 +1,4 @@
 class UsersController < ApplicationController
-  # BEGINNER = "旅行ビギナー"
-  # MASTER = "旅行マスター"
-
   skip_before_action :require_sign_in!, only: [:new, :create]
 
   def new
@@ -24,13 +21,10 @@ class UsersController < ApplicationController
   end
 
   def show
-    @count_list = []
-    @continents = Continent.all
-    for i in 2..9 do
-      @continent = @continents.find(i)
-      @area_count = @continent.posts.count
-      @count_list.push(@area_count)
-    end
+    @user_posts = current_user.posts
+    @completed_badges = User.badge_check(@user_posts)
+    @completed_badges_js = @completed_badges.to_json.html_safe
+
   end
 
   private
