@@ -43,6 +43,7 @@ main {
 
 .logo {
   font-family: 'Kaisei Decol', serif;
+  font-size: 40px
 }
 
 footer {
@@ -61,13 +62,85 @@ a, a:hover {
 // ボタンカラー
 .btn-primary {
     color: white !important;
-    background-color: #97A8A0 !important;
-    border-color: #97A8A0!important;
+    background-color: #DC9750 !important;
+    border-color: #DC9750!important;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
     color: #362222!important;
-    background-color: #94BCC0!important;
-    border-color: #94BCC0!important;
+    background-color: #ECEEE0!important;
+    border-color: #ECEEE0!important;
+}
+
+// Home
+.home-visual {
+  width: 100%;
+  height: 500px;
+  background-image: image-url("image1.png");
+  background-size: cover;
+  background-position: bottom center;
+}
+
+.home-visual-text {
+  font-size: 60px;
+  font-weight: bold;
+  position: absolute;
+  text-align: center;
+  color: black;
+  width: 100%;
+  height: 500px;
+  padding-top: 250px;
+}
+
+.home-button {
+  text-align: center;
+}
+
+// About
+.about-title {
+  padding: 0.4em 0.5em;
+  color: #494949;
+  background: #f4f4f4;
+  border-left: solid 5px #97A8A0;
+  border-bottom: solid 3px #d7d7d7;
+}
+
+.about-title, .about-top, .about-text {
+  text-align: center;
+  line-height: 2.0;
+
+}
+
+// Post create
+.form-group {
+  margin-bottom: 20px;
+}
+
+// Post index
+.area {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.area-button {
+  padding: 0 20px;
+}
+
+.post-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+.items {
+  padding: 30px;
+}
+.photo {
+  border-radius: 50%;
+  width:  300px;
+  height: 300px;
+  object-fit: cover
+}
+
+.item-text {
+  text-align: center;
 }
 
 // ページネーション
@@ -95,58 +168,19 @@ a, a:hover {
   background-color: #DC9750;
 }
 
-// About
-.about-title {
-  padding: 0.4em 0.5em;
-  color: #494949;
-  background: #f4f4f4;
-  border-left: solid 5px #97A8A0;
-  border-bottom: solid 3px #d7d7d7;
-}
-
-.about-title, .about-top, .about-text {
-  text-align: center;
-  line-height: 2.0;
-
-}
-
-// Post create
-.form-group {
-  margin-bottom: 20px;
-}
-
-// Post index
-.post-items {
-  display: flex;
-  flex-wrap: wrap;
-}
-.items {
-  padding: 30px;
-}
-.photo {
-  border-radius: 50%;
-  width:  300px;
-  height: 300px;
-  object-fit: cover
-}
-
-.item-text {
-  text-align: center;
-}
-
 // User index
 .image1 {
   width: 100%;
-  height: 600px;
+  height: 500px;
   background-image: image-url("image1.png");
   background-size: cover;
-  background-position: center;
+  background-position: bottom center;
 }
 
 .btn-circle-flat {
   display: block;
   text-decoration: none!important;
-  background: #97A8A0;
+  background: #DC9750;
   color: #FFF;
   width: 100px;
   height: 100px;
@@ -169,13 +203,14 @@ a, a:hover {
 }
 
 .continent-area {
-  padding: 90px 80px;
+  padding: 60px 80px;
   margin: auto;
 }
 
 .badge {
   opacity: 0.4;
   filter: alpha(opacity=40);
+  padding: 20px 60px;
 }
 
 .completed {

@@ -1,15 +1,56 @@
-<h1>マイページ</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+      <h2>プロフィール</h2>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>名前</th>
+            <td><%= @current_user.name %></td>
+          </tr>
+          <tr>
+            <th>Email</th>
+            <td><%= @current_user.email %></td>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="col-md-5">
+      <h2>旅人レベル</h2>
+      <%= @user_level %>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-12">
+      <h2>獲得バッジ</h2>
+      <div class="badge">
+        <%= image_tag "Japan.png", id: "日本", size: '150x150' %>
+      </div>
+      <div class="badge">
+        <%= image_tag "Asia.png", id: "アジア", size: '150x150' %>
+      </div>
+      <div class="badge">
+        <%= image_tag "Oceania.png", id: "オセアニア", size: '150x150' %>
+      </div>
+      <div class="badge">
+        <%= image_tag "Europe.png", id: "ヨーロッパ", size: '150x150' %>
+      </div>
+      <div class="badge">
+        <%= image_tag "Middle_East.png", id: "中東", size: '150x150' %>
+      </div>
+      <div class="badge">
+        <%= image_tag "Africa.png", id: "アフリカ", size: '150x150' %>
+      </div>
+      <div class="badge">
+        <%= image_tag "North_America.png", id: "北米", size: '150x150' %>
+      </div>
+      <div class="badge">
+        <%= image_tag "South_America.png", id: "南米", size: '150x150' %>
+      </div>
+    </div>
+  </div>
+</div>
+
 <%= @completed_badges %>
 <input type=hidden class="badge_array" value="<%= @completed_badges_js %>">
-<div class="badges">
-  <%= image_tag "Japan.png", id: "日本", class: "image" %>
-  <%= image_tag "Asia.png", id: "アジア", class: "image" %>
-  <%= image_tag "Oceania.png", id: "オセアニア", class: "image" %>
-  <%= image_tag "Europe.png", id: "ヨーロッパ", class: "image" %>
-  <%= image_tag "Middle_East.png", id: "中東", class: "image" %>
-  <%= image_tag "Africa.png", id: "アフリカ", class: "image" %>
-  <%= image_tag "North_America.png", id: "北米", class: "image" %>
-  <%= image_tag "South_America.png", id: "南米", class: "image" %>
-  
-  <%= image_tag 'Japan.png', class: 'badge' %>
-</div>

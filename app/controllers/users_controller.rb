@@ -21,6 +21,9 @@ class UsersController < ApplicationController
   end
 
   def show
+    @all_posts_count = current_user.posts.count
+    @user_level = User.level_check(@all_posts_count)
+
     @user_posts = current_user.posts
     @completed_badges = User.badge_check(@user_posts)
     @completed_badges_js = @completed_badges.to_json.html_safe
