@@ -8,17 +8,25 @@
     <div class="col-md-4">
       <div class="post-details">
         <div class="country">
-          <h3><%= @post.country %>・<%= @post.city %></h3>
+          <h3>
+            <i class="fas fa-map-marker-alt"></i>
+            <%= @post.country %>・<%= @post.city %>
+          </h3>
         </div>
         
         <div class="flight">
-          <h4>便名</h4>
+          <h4>
+            <i class="fas fa-plane"></i>
             <%= @post.flight %>
+          </h4>
+            
         </div>
         
         <div class="date">
-          <h4>日付</h4>
+          <h4>
+            <i class="fas fa-clock"></i>
             <%= @post.from_date %> ~ <%= @post.to_date %>
+          </h4>
         </div>
         
         <div class="date">
