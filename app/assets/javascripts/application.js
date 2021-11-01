@@ -18,8 +18,13 @@
 //= require turbolinks
 //= require_tree .
 
-var badge_array = JSON.parse($('.badge_array').val());
 
-$.each(badge_array, function(value) {
-  $("#"+ value).addClass("completed")
-})
+
+
+
+$(document).on('turbolinks:load', function() {
+  var badge_array = $(".badge_array").val()
+  $.each(JSON.parse(badge_array), function(index, value){
+     $("#"+value).addClass("completed")
+  })
+});

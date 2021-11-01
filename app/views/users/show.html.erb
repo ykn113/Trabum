@@ -20,37 +20,36 @@
       <%= @user_level %>
     </div>
   </div>
-  
+
   <div class="row">
     <div class="col-md-12">
+
+      <input type="hidden" class="badge_array" value="<%= @completed_badges %>">
       <h2>獲得バッジ</h2>
-      <div class="badge">
-        <%= image_tag "Japan.png", id: "日本", size: '150x150' %>
+      <div class="badge" id="日本">
+        <%= image_tag "Japan.png", size: '150x150' %>
       </div>
-      <div class="badge">
-        <%= image_tag "Asia.png", id: "アジア", size: '150x150' %>
+      <div class="badge" id="アジア">
+        <%= image_tag "Asia.png", size: '150x150' %>
       </div>
-      <div class="badge">
-        <%= image_tag "Oceania.png", id: "オセアニア", size: '150x150' %>
+      <div class="badge" id="オセアニア">
+        <%= image_tag "Oceania.png", size: '150x150' %>
       </div>
-      <div class="badge">
-        <%= image_tag "Europe.png", id: "ヨーロッパ", size: '150x150' %>
+      <div class="badge" id="ヨーロッパ">
+        <%= image_tag "Europe.png", size: '150x150' %>
       </div>
-      <div class="badge">
-        <%= image_tag "Middle_East.png", id: "中東", size: '150x150' %>
+      <div class="badge" id="中東">
+        <%= image_tag "Middle_East.png", size: '150x150' %>
       </div>
-      <div class="badge">
-        <%= image_tag "Africa.png", id: "アフリカ", size: '150x150' %>
+      <div class="badge" id="アフリカ">
+        <%= image_tag "Africa.png", size: '150x150' %>
       </div>
-      <div class="badge">
-        <%= image_tag "North_America.png", id: "北米", size: '150x150' %>
+      <div class="badge" id="北米">
+        <%= image_tag "North_America.png", size: '150x150' %>
       </div>
-      <div class="badge">
-        <%= image_tag "South_America.png", id: "南米", size: '150x150' %>
+      <div class="badge" id="南米">
+        <%= image_tag "South_America.png", size: '150x150' %>
       </div>
     </div>
   </div>
 </div>
-
-<%= @completed_badges %>
-<input type=hidden class="badge_array" value="<%= @completed_badges_js %>">

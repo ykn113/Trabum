@@ -26,7 +26,6 @@ class UsersController < ApplicationController
 
     @user_posts = current_user.posts
     @completed_badges = User.badge_check(@user_posts)
-    @completed_badges_js = @completed_badges.to_json.html_safe
 
   end
 
