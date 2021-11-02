@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mt-3">
   <div class="row">
     <div class="col-md-5">
       <h2>プロフィール</h2>
@@ -15,15 +15,14 @@
         </thead>
       </table>
     </div>
-    <div class="col-md-5">
-      <h2>旅人レベル</h2>
-      <%= @user_level %>
+    <div class="col-md-5 m-auto">
+      <h2>トラベラーレベル: <%= @user_level %></h2>
+
     </div>
   </div>
 
   <div class="row">
     <div class="col-md-12">
-
       <input type="hidden" class="badge_array" value="<%= @completed_badges %>">
       <h2>獲得バッジ</h2>
       <div class="badge" id="日本">
@@ -52,4 +51,7 @@
       </div>
     </div>
   </div>
+  <div class="icon8-link">
+      icons by <a target="_blank" href="https://icons8.com">Icons8</a>
+  <div>
 </div>

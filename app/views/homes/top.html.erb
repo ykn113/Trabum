@@ -1,22 +1,102 @@
-<div class="home-visual">
-  <div class="home-visual-text">
-    <p>旅を記そう!</p>
-      <%= link_to "新規登録", signup_path, class: "btn btn-primary nav-signup btn-lg" %>
-      <%= link_to "ログイン", login_path, class: "btn btn-primary nav-signup btn-lg" %>
-  </div>
-</div>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <div class="how-to-use">
-        <h2>使い方</h2>
-        <p>
-          使い方はとてもシンプル
-          投稿画面で旅行の情報や思い出メモを記録し、<br>保存するだけでコレクションに追加されます。<br>
-          旅行するたびトラバムに記録し、<br>どんどん旅人レベルを上げていきましょう！<br>
-          投稿数が増えればバッジももらえるかも...？！
-        </p>
+       <div class="home-visual">
+        <div class="home-visual-text">
+          <%= link_to "新規登録", signup_path, class: "btn btn-primary nav-signup btn-lg" %>
+          <%= link_to "ログイン", login_path, class: "btn btn-primary nav-signup btn-lg" %>
+        </div>
       </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 how-to-use-block">
+      <h2>使い方</h2>
+      <p>投稿画面であなたの旅行を記録しましょう！</p>
+      <p>
+        旅行中のベストショットと<br>日程や便名、<br>
+        思い出メモに訪れた場所や宿泊したホテル、<br>レストランなどを記入。<br>
+      </p>
+      <p>
+        保存後はエリアごとに閲覧ができます。<br>
+      </p>
+      <p>旅行するたびトラバムに記録し、<br>どんどん旅人レベルを上げていきましょう！</p>
+      <p>コレクションが増えれば<br>エキスパートバッジももらえるかも！？</p>
+    </div>
+    <div class="col-md-4 how-to-use-block">
+      <h2>レベル</h2>
+      <p>投稿数が増えるにつれて<br>あなたのトラベラーレベルが上がります</p>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th>1~10</th>
+            <td>紙ひこうき</td>
+          </tr>
+          <tr>
+            <th>1~20</th>
+            <td>ヘリコプター</td>
+          </tr>
+          <tr>
+            <th>1~30</th>
+            <td>ジェット機</td>
+          </tr>
+          <tr>
+            <th>1~40</th>
+            <td>ロケット</td>
+          </tr>
+          <tr>
+            <th>41~</th>
+            <td>スペースシップ</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+    <div class="col-md-4 how-to-use-block">
+      <h2>バッジ</h2>
+      <p>一つのエリアに５つ以上※の投稿でバッジがもらえます</p>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th>日本</th>
+            <td>さくらバッジ</td>
+          </tr>
+          <tr>
+            <th>アジア</th>
+            <td>お米バッジ</td>
+          </tr>
+          <tr>
+            <th>オセアニア</th>
+            <td>ワラビーバッジ</td>
+          </tr>
+          <tr>
+            <th>ヨーロッパ</th>
+            <td>キャッスルバッジ</td>
+          </tr>
+          <tr>
+            <th>中東</th>
+            <td>アラジンバッジ</td>
+          </tr>
+          <tr>
+            <th>アフリカ</th>
+            <td>サファリバッジ</td>
+          </tr>
+          <tr>
+            <th>北米</th>
+            <td>ベアーバッジ</td>
+          </tr>
+          <tr>
+            <th>南米</th>
+            <td>アマゾンバッジ</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class=small>
+        ※現在は開発段階のため<br>２つ以上の投稿でバッジがもらえるようになっています。
+      </p>
     </div>
   </div>
 </div>
