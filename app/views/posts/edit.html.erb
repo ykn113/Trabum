@@ -1,6 +1,6 @@
 <!--エラーメッセージ-->
 <% if @post.errors.any? %>
-  <div class="container mt-5">
+  <div class="container">
     <div class="form">
       <div class="error-box p-3">
         <h5 class=text-danger><%= @post.errors.count %>件のエラーが発生しました</h5>
@@ -14,10 +14,10 @@
   </div>
 <% end %>
 
-<div class="container">
+<div class="container mt-3">
   <div class="row">
     <div class="col-md-12">
-      <h2>写真を追加</h2>
+      <h2>旅行を編集</h2>
       <%= form_with model: @post, local:true do |f| %>
         <div class="form">
           <div class="form-group">

@@ -1,8 +1,11 @@
 class User < ApplicationRecord
 
-  BEGINNER = "旅行ビギナー"
-  MASTER = "旅行マスター"
-  CAN_GET_BADGE = 1
+  BEGINNER = "紙ひこうき️"
+  EXPERT = "ヘリコプター"
+  MASTER = "ジェット機️"
+  GRAND_MASTER = "ロケット"
+  LEGEND = "スペースシップ"
+  CAN_GET_BADGE = 2
 
   @continents = Continent.all
 
@@ -19,17 +22,25 @@ class User < ApplicationRecord
     Digest::SHA256.hexdigest(token.to_s)
   end
 
+  # ユーザーのレベルをチェックするメソッド
   def self.level_check(all_posts_count)
     case all_posts_count
-    when 0..5
+    when 0..10
       @level = BEGINNER
-    when 6..10
+    when 11..20
+      @level = EXPERT
+    when 21..30
       @level = MASTER
+    when 31..40
+      @level = GRAND_MASTER
+    when 41..nill
+       @level = LEGEND
     else
-      @level = "???"
+      @level = "レベルが読み込めませんでした"
     end
   end
 
+  # 各エリアの投稿数をカウントし、バッジのあるエリアを配列でリターン
   def self.badge_check(user_posts)
     @has_area_badge = []
 

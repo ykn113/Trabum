@@ -24,7 +24,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.user_id = current_user.id
     if @post.save
-      redirect_to post_path(@post.id), notice: "写真を保存しました。"
+      redirect_to post_path(@post.id), notice: "コレクションに追加しました。"
     else
       @continent_list = Continent.pluck('name, id')
       render :new
@@ -45,7 +45,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @continents = Continent.all
     if @post.update(post_params)
-      redirect_to post_path(@post.id), notice: '写真を更新しました。'
+      redirect_to post_path(@post.id), notice: '投稿を編集しました。'
     else
        @continent_list = Continent.pluck('name, id')
       render :edit
