@@ -1,0 +1,16 @@
+<div class = "container">
+  <div class = "row">
+    <div class="px-3 mx-auto mt-5">
+      <h3 class="unsubscribe"><strong>本当に退会しますか？</strong></h3>
+      <p class="unsubscribe">
+        退会すると、<br>
+        これまでのレシピが閲覧できなくなります。<br>
+        退会する場合は、「退会する」をクリックしてください。<br>
+      </p>
+      <div class="mx-auto">
+        <%= link_to '退会しない', users_path, class:'btn btn-primary offset-3' %>
+        <%= link_to '退会する', withdraw_user_path(@user), method: :patch, class:'btn btn-primary' %>
+      </div>
+    </div>
+  </div>
+</div>
