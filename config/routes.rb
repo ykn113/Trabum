@@ -10,5 +10,8 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
   resources :posts, only: [:index, :show, :new, :create, :edit, :update, :destroy]
   resources :users, only: [:index, :show]
+  get 'unsubscribe/' => 'users#unsubscribe', as: 'confirm_unsubscribe'
+  patch ':id/withdraw/' => 'users#withdraw', as: 'withdraw_user'
+  put 'withdraw/' => 'users#withdraw'
   
 end

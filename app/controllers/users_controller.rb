@@ -26,7 +26,18 @@ class UsersController < ApplicationController
 
     @user_posts = current_user.posts
     @completed_badges = User.badge_check(@user_posts)
+  end
+  
+  def unsubscribe
+    @user = current_user
+  end
 
+  def withdraw
+    @user = current_user
+    @user.update(is_valid: false)
+    reset_session
+    flash[:notice] = "退会しました。"
+    redirect_to root_path
   end
 
   private
