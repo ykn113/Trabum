@@ -53,5 +53,5 @@ class User < ApplicationRecord
     
     @has_area_badge
   end
-
+  
 end

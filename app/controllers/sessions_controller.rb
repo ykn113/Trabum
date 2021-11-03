@@ -1,8 +1,8 @@
 class SessionsController < ApplicationController
 
   skip_before_action :require_sign_in!, only: [:new, :create]
-  before_action :set_user, only: [:create]
-
+  before_action :validate_user, only: [:create]
+  
   def new
   end
 
@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       sign_in(@user)
       redirect_to users_path
     else
-      flash[:danger] = 'Invalid email/password combination'
+      flash[:danger] = 'メールアドレスまたはパスワードが正しくありません'
       render 'new'
     end
   end
@@ -23,10 +23,14 @@ class SessionsController < ApplicationController
 
   private
 
-  def set_user
+  def validate_user
     @user = User.find_by!(email: session_params[:email])
+    if @user.is_valid == false
+      reset_session
+      redirect_to signup_path
+    end
   rescue
-    flash.now[:danger] = t('.flash.invalid_mail')
+    flash.now[:danger] = t('.flash.invalid_email')
     render action: 'new'
   end
 
@@ -34,14 +38,4 @@ class SessionsController < ApplicationController
     params.require(:session).permit(:email, :password)
   end
   
-  def reject_inactive_user
-    @user = current_user
-    if @user
-      if @user.valid_password?(params[:user][:password]) && !@user.is_valid
-        reset_session
-        redirect_to signup_path
-      end
-    end
-  end
-
 end
