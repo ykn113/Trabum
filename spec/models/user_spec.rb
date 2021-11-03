@@ -8,9 +8,10 @@ RSpec.describe "userモデルに関するテスト", type: :model do
       expect(user.errors[:email]).to include("can't be blank")
     end
   end
-  describe 'アソシエーションのテスト' do
-    context 'postモデルとの関係' do
-      it '1:Nとなっている' do
+  
+  describe "アソシエーションのテスト" do
+    context "postモデルとの関係" do
+      it "1:Nとなっている" do
         expect(User.reflect_on_association(:posts).macro).to eq :has_many
       end
     end

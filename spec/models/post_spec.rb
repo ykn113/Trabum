@@ -39,14 +39,14 @@ RSpec.describe "postモデルに関するテスト", type: :model do
     end
   end
   
-  describe 'アソシエーションのテスト' do
-    context 'userモデルとの関係' do
-      it 'N:1となっている' do
+  describe "アソシエーションのテスト" do
+    context "userモデルとの関係" do
+      it "N:1となっている" do
         expect(Post.reflect_on_association(:user).macro).to eq :belongs_to
       end
     end
-    context 'continentモデルとの関係' do
-      it 'N:1となっている' do
+    context "continentモデルとの関係" do
+      it "N:1となっている" do
         expect(Post.reflect_on_association(:continent).macro).to eq :belongs_to
       end
     end
