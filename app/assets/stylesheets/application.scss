@@ -71,16 +71,16 @@ a, a:hover {
     border-color: #ECEEE0!important;
 }
 
-// Home
-.home-visual {
+// Top
+.top-visual {
   width: 100%;
   height: 550px;
-  background-image: image-url("home_image.png");
+  background-image: image-url("top_image.png");
   background-size: cover;
   background-position: bottom center;
 }
 
-.home-visual-text {
+.top-visual-text {
   font-size: 60px;
   font-weight: bold;
   position: absolute;
@@ -213,14 +213,48 @@ a, a:hover {
   opacity: 1.0;
 }
 
+.unsubscribe {
+  text-align: center;
+}
+
 .icon8-link {
   text-align: right;
 }
 
 
 @media screen and (max-width: 425px) {
+  // Top
+  .top-visual {
+    width: 100%;
+    height: 150px;
+    background-image: image-url("top_image.png");
+    background-size: contain;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+  }
+
+  .top-visual-text {
+    display:none
+  }
+  
   .how-to-use-block:not(:nth-child(3)) {
     border-bottom: 5px dotted #DC9750;
     border-right: none
   }
+  
+  // User index
+  .image1 {
+    width: 100%;
+    height: 600px;
+    background-image: image-url("world_map.png");
+    background-size: contain;
+
+    background-position: bottom center;
+  }
+
+  .continent-area {
+    padding: 10px 20px;
+    margin: auto;
+  }
+
 }
