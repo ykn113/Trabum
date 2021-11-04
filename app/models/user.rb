@@ -50,8 +50,8 @@ class User < ApplicationRecord
         @has_area_badge.push(@continents.find(continent_id).name)
       end
     end
-    
+
     @has_area_badge
   end
-  
+
 end
