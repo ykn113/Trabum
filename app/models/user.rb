@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-
+  
   BEGINNER = "紙ひこうき️"
   EXPERT = "ヘリコプター"
   MASTER = "ジェット機️"
@@ -43,15 +43,12 @@ class User < ApplicationRecord
   # 各エリアの投稿数をカウントし、バッジのあるエリアを配列でリターン
   def self.badge_check(user_posts)
     @has_area_badge = []
-
     for continent_id in 2..9 do
       area_count = user_posts.where(continent_id: continent_id).count
       if area_count >= CAN_GET_BADGE
         @has_area_badge.push(@continents.find(continent_id).name)
       end
     end
-
     @has_area_badge
   end
-
 end

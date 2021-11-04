@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-  
   def index
     @continents = Continent.all
     if params[:continent_id]
@@ -48,7 +47,7 @@ class PostsController < ApplicationController
     if @post.update(post_params)
       redirect_to post_path(@post.id), notice: '投稿を編集しました。'
     else
-       @continent_list = Continent.pluck('name, id')
+      @continent_list = Continent.pluck('name, id')
       render :edit
     end
   end

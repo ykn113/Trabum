@@ -16,9 +16,11 @@
   display: flex;
   flex-wrap: wrap;
 }
+
 .items {
   padding: 30px;
 }
+
 .photo {
   border-radius: 50%;
   width:  300px;
@@ -50,6 +52,7 @@
   border-radius: 15px;
   overflow: hidden;
 }
+
 .pagination>li>a:hover {
   color: #DC9750;
   background-color: #DC9750;
