@@ -1,0 +1,17 @@
+ja:
+  activerecord: 
+    post:
+      post: "レシピ"
+    attributes:
+      post:
+        id: "ID"
+        user_id: "名前"
+        continent: "エリア"
+        continent_id: "エリア"
+        image: "写真"
+        country: "国名"
+        city: "都市名"
+        memo: "思い出メモ"
+        flight: "便名"
+        from_date: "日付"
+        to_date: "日付"
