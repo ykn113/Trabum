@@ -1,16 +1,12 @@
 <!--エラーメッセージ-->
 <% if @post.errors.any? %>
   <div class="container">
-    <div class="form">
-      <div class="error-box p-3">
-        <h5 class=text-danger><%= @post.errors.count %>件のエラーが発生しました</h5>
-        <ul class="ml-4">
-          <% @post.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
+    <h5 class=text-danger><%= @post.errors.count %>件のエラーが発生しました</h5>
+    <ul class="ml-4">
+      <% @post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
   </div>
 <% end %>
 
@@ -39,7 +35,6 @@
           <div class="form-group">
             <%= f.label :日付 %><br/>
             <%= f.date_field :from_date %>から<%= f.date_field :to_date %>まで<br/>
-
           </div>
           <div class="form-group">
             <%= f.label :便名 %><br/>
@@ -49,10 +44,9 @@
             <%= f.label :思い出メモ%><br/>
             <%= f.text_area :memo, class:"form-control" %>
           </div>
-
-          <div class="create-btn">
-            <%= f.submit '保存', class: "btn btn-primary" %>
-          </div>
+        </div>
+        <div class="create-btn">
+          <%= f.submit '保存', class: "btn btn-primary" %>
         </div>
       <% end %>
     </div>

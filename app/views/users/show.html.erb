@@ -15,9 +15,10 @@
         </thead>
       </table>
     </div>
-    <div class="col-md-5 m-auto">
-      <h2>トラベラーレベル: <%= @user_level %></h2>
-
+    
+    <div class="col-md-5 m-auto text-center">
+      <h2><i class="fas fa-plane"></i>トラベラーレベル<i class="fas fa-plane"></i></h2>
+      <h2><%= @user_level %></h2>
     </div>
   </div>
 
@@ -25,36 +26,38 @@
     <div class="col-md-12">
       <input type="hidden" class="badge_array" value="<%= @completed_badges %>">
       <h2>獲得バッジ</h2>
-      <div class="badge" id="日本">
-        <%= image_tag "Japan.png", size: '150x150' %>
-      </div>
-      <div class="badge" id="アジア">
-        <%= image_tag "Asia.png", size: '150x150' %>
-      </div>
-      <div class="badge" id="オセアニア">
-        <%= image_tag "Oceania.png", size: '150x150' %>
-      </div>
-      <div class="badge" id="ヨーロッパ">
-        <%= image_tag "Europe.png", size: '150x150' %>
-      </div>
-      <div class="badge" id="中東">
-        <%= image_tag "Middle_East.png", size: '150x150' %>
-      </div>
-      <div class="badge" id="アフリカ">
-        <%= image_tag "Africa.png", size: '150x150' %>
-      </div>
-      <div class="badge" id="北米">
-        <%= image_tag "North_America.png", size: '150x150' %>
-      </div>
-      <div class="badge" id="南米">
-        <%= image_tag "South_America.png", size: '150x150' %>
+      <div class="badge_container">
+        <div class="area_badge" id="日本">
+          <%= image_tag "Japan.png" %>
+        </div>
+        <div class="area_badge" id="アジア">
+          <%= image_tag "Asia.png" %>
+        </div>
+        <div class="area_badge" id="オセアニア">
+          <%= image_tag "Oceania.png" %>
+        </div>
+        <div class="area_badge" id="ヨーロッパ">
+          <%= image_tag "Europe.png" %>
+        </div>
+        <div class="area_badge" id="中東">
+          <%= image_tag "Middle_East.png" %>
+        </div>
+        <div class="area_badge" id="アフリカ">
+          <%= image_tag "Africa.png" %>
+        </div>
+        <div class="area_badge" id="北米">
+          <%= image_tag "North_America.png" %>
+        </div>
+        <div class="area_badge" id="南米">
+          <%= image_tag "South_America.png" %>
+        </div>
       </div>
     </div>
   </div>
   
    <!--退会機能-->
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 ">
       <%= link_to '退会する', confirm_unsubscribe_path, class:'btn btn-primary ml-5' %>
     </div>
   </div>

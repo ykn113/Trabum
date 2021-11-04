@@ -23,6 +23,7 @@ class SessionsController < ApplicationController
 
   private
 
+  # 退会済みのユーザーをブロック
   def validate_user
     @user = User.find_by!(email: session_params[:email])
     if @user.is_valid == false
@@ -30,7 +31,7 @@ class SessionsController < ApplicationController
       redirect_to signup_path
     end
   rescue
-    flash.now[:danger] = t('.flash.invalid_email')
+    flash.now[:danger] = 'メールアドレスまたはパスワードが正しくありません'
     render action: 'new'
   end
 

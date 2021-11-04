@@ -2,7 +2,6 @@
   <div class="row">
     <div class="col-md-4 mx-auto">
       <h2>新規登録</h2>
-
       <%= form_with model: @user, url: signup_path, local: true do |f| %>
         <div class="form-group">
           <%= f.label "名前" %><br/>

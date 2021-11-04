@@ -17,16 +17,13 @@ class UsersController < ApplicationController
 
   def index
     @continents = Continent.all
-    @all_posts_count = current_user.posts.count
-    @user_level = User.level_check(@all_posts_count)
   end
 
   def show
-    @all_posts_count = current_user.posts.count
-    @user_level = User.level_check(@all_posts_count)
-
-    @user_posts = current_user.posts
-    @completed_badges = User.badge_check(@user_posts)
+    user_posts = current_user.posts
+    all_posts_count = user_posts.count
+    @user_level = User.level_check(all_posts_count)
+    @completed_badges = User.badge_check(user_posts)
   end
   
   def unsubscribe

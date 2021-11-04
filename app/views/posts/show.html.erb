@@ -13,22 +13,21 @@
             <%= @post.country %>・<%= @post.city %>
           </h3>
         </div>
-
+        
         <div class="flight mb-4">
           <h4>
             <i class="fas fa-plane"></i>
             <%= @post.flight %>
           </h4>
-
         </div>
-
+        
         <div class="date mb-5">
           <h4>
             <i class="fas fa-clock"></i>
             <%= @post.from_date %> ~ <%= @post.to_date %>
           </h4>
         </div>
-
+        
         <div class="date mb-5">
           <h4>思い出メモ</h4>
             <%= @post.memo %>
@@ -39,7 +38,6 @@
         <%= link_to "", edit_post_path, class:"fas fa-edit btn btn-lg btn-primary" %></td>
         <%= link_to "", post_path(@post),method: :delete, class:"fas fa-trash btn btn-lg btn-primary", "data-confirm" =>"本当に消しますか?" %>
       </div>
-
     </div>
   </div>
 </div>

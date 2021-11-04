@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  
   def index
     @continents = Continent.all
     if params[:continent_id]
