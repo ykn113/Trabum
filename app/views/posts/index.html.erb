@@ -30,7 +30,7 @@
       <% @posts.each do |post| %>
         <div class="items">
           <%= link_to post_path(post.id) do %>
-            <%= attachment_image_tag post,:image, class: "img-fluid photo", fallback: "no_image.jpg" %>
+            <%= attachment_image_tag post,:image, class: "photo", fallback: "no_image.jpg" %>
             <div class="item-text">
               <h4><%= post.country %>・<%= post.city %></h4>
             </div>
