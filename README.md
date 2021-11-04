@@ -1,4 +1,4 @@
-
+![trabum](https://user-images.githubusercontent.com/85142230/140265824-dced7f35-0f2f-444a-9540-f26ac96b57b5.gif)
 # トラバム
 
 ## ✈️サイト概要
